@@ -2,7 +2,6 @@ const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const careerToggle = document.querySelector('#career-toggle');
 const earlierRoles = document.querySelector('#earlier-roles');
-const toast = document.querySelector('#toast');
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
@@ -37,21 +36,6 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
-
-let toastTimer;
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add('is-visible');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 3600);
-}
-
-document.querySelectorAll('[data-contact-placeholder="true"]').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    showToast('Add Masoud’s full email address here before publishing.');
-  });
-});
 
 const card = document.querySelector('.player-card');
 if (card && window.matchMedia('(pointer: fine)').matches) {

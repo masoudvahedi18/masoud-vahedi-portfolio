@@ -49,7 +49,7 @@ function showToast(message) {
 document.querySelectorAll('[data-contact-placeholder="true"]').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
-    showToast('Add Masoud’s email or LinkedIn URL here before publishing.');
+    showToast('Add Masoud’s full email address here before publishing.');
   });
 });
 

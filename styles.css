@@ -177,16 +177,16 @@ button, input { font: inherit; }
 .services { color: var(--cream); background: var(--green-950); }
 .section-heading-light > p:last-child { color: rgba(242,235,218,.65); }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--white-line); border-left: 1px solid var(--white-line); }
-.service-card { position: relative; min-height: 440px; padding: 30px; border-right: 1px solid var(--white-line); border-bottom: 1px solid var(--white-line); }
+.service-card { position: relative; min-height: 420px; padding: 30px; display: flex; flex-direction: column; border-right: 1px solid var(--white-line); border-bottom: 1px solid var(--white-line); }
 .service-card::before { content: ""; position: absolute; inset: 0; background: var(--green-800); transform: scaleY(0); transform-origin: bottom; transition: transform .3s ease; }
 .service-card:hover::before { transform: scaleY(1); }
 .service-card > * { position: relative; z-index: 2; }
 .service-number { color: rgba(242,235,218,.4); font: 600 13px "Newsreader", Georgia, serif; }
-.service-icon { width: 56px; height: 56px; display: grid; place-items: center; margin: 60px 0 24px; color: var(--green-950); background: var(--gold); border-radius: 50%; font-size: 25px; }
+.service-icon { width: 56px; height: 56px; display: grid; place-items: center; margin: 34px 0 20px; color: var(--green-950); background: var(--gold); border-radius: 50%; font-size: 25px; }
 .service-card h3 { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: 34px; }
-.service-card p { color: rgba(242,235,218,.65); line-height: 1.7; }
-.service-card ul { padding-left: 18px; color: rgba(242,235,218,.72); font-size: 13px; line-height: 1.9; }
-.service-card a { position: absolute; left: 30px; bottom: 28px; font-size: 13px; font-weight: 700; border-bottom: 1px solid rgba(242,235,218,.35); padding-bottom: 5px; }
+.service-card p { margin: 14px 0 10px; color: rgba(242,235,218,.65); line-height: 1.6; }
+.service-card ul { margin: 6px 0 24px; padding-left: 18px; color: rgba(242,235,218,.72); font-size: 13px; line-height: 1.75; }
+.service-card a { position: relative; align-self: flex-start; margin-top: auto; font-size: 13px; font-weight: 700; border-bottom: 1px solid rgba(242,235,218,.35); padding-bottom: 5px; }
 
 .photo-interlude { min-height: 520px; display: grid; grid-template-columns: 1.1fr .9fr; color: var(--cream); background: var(--green-900); }
 .photo-interlude > img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: center 32%; filter: saturate(.55) contrast(1.06); }
